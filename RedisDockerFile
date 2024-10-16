@@ -1,0 +1,3 @@
+FROM redis/redis-stack:7.2.0-v0
+COPY redis_handler/redis-stack.conf /redis-stack.conf
+EXPOSE 6379 8001

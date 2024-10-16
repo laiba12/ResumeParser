@@ -1,0 +1,89 @@
+{
+    "personal_information": {
+        "first_name": "Rupesh",
+        "middle_name": "Prasad",
+        "last_name": "Patro",
+        "date_of_birth": "",
+        "email": "mailbox8.patro@gmail.com",
+        "mobile_number": "+91 9920244789",
+        "designation": "Data Architect",
+        "total_experience": {
+            "years": 18,
+            "months": 0
+        },
+        "availability": ""
+    },
+    "key_skills": {
+        "skills": [
+            "Data Warehousing",
+            "Data Management",
+            "ETL",
+            "Data Integration",
+            "Data Analysis",
+            "Data Modeling",
+            "BI Design",
+            "Data Analytics",
+            "Data Visualization",
+            "RDBMS",
+            "Database Maintenance",
+            "SQL",
+            "Performance Tuning",
+            "Cloud Services",
+            "AWS",
+            "Azure",
+            "Software Development Life Cycle",
+            "Agile Development",
+            "Scrum Framework"
+        ],
+        "languages": [
+            "T SQL",
+            "PL SQL",
+            "Postgres SQL",
+            "MDX",
+            "C#"
+        ]
+    },
+    "education": [
+        {
+            "institute": "National Institute of Science and Technology, BPUT Rourkela, Orissa, India",
+            "degree": "B.E. in Electrical & Electronics",
+            "start_date": "2004",
+            "end_date": "2004"
+        },
+        {
+            "institute": "CHSE, Bhubaneswar, Orissa",
+            "degree": "HSC",
+            "start_date": "2000",
+            "end_date": "2000"
+        },
+        {
+            "institute": "BSE, Bhubaneswar, Orissa",
+            "degree": "SSC",
+            "start_date": "1998",
+            "end_date": "1998"
+        }
+    ],
+    "address_details": {
+        "address": "",
+        "city": "",
+        "country": "",
+        "postal_code": ""
+    },
+    "social_links": {
+        "urls": [
+            "https://www.linkedin.com/in/rupesh-patro-1a89795z3"
+        ]
+    },
+    "experience": [
+        {
+            "title": "Data Architect",
+            "company_name": "Current Company",
+            "company_location": "Current Location",
+            "employment_type": "Full-time",
+            "start_date": "",
+            "end_date": "",
+            "current_role": "Yes",
+            "summary": "18 plus years of experience in IT in Data Warehousing, Business Intelligence, Analytics, Data Engineering, Data Management, Data Modeling roles and projects. Strong knowledge in ETL, Data Integration, BI Design, Cloud Services, SDLC, Agile, Scrum Framework."
+        }
+    ]
+}

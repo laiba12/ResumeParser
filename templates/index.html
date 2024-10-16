@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume PDF Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap; /* Preserve white space formatting */
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Your Resumes (Multiple Files)</h1>
+    <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+        <!-- Allow multiple file uploads -->
+        <input type="file" id="fileInput" name="files" multiple accept=".pdf, .docx, .doc, .txt" required><br><br>
+        <input type="submit" value="Upload Files"> <!-- Updated label for clarity -->
+    </form><br>
+
+    
+    <button onclick="copyText()">Copy Text</button>
+    <pre id="output"></pre>
+
+    <script>
+        function copyText() {
+            const textBox = document.getElementById("output");
+            
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = textBox.textContent;
+            
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            tempTextArea.setSelectionRange(0, 99999);
+
+            document.execCommand("copy");
+
+            document.body.removeChild(tempTextArea);
+
+            alert("Text copied to clipboard!");
+        }
+
+        const form = document.getElementById('uploadForm');
+        const outputDiv = document.getElementById('output');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();  // Prevent default form submission
+            outputDiv.textContent = "";  // Clear previous output
+
+            const fileInput = document.getElementById('fileInput');
+            const files = fileInput.files;  // Get all selected files
+            const formData = new FormData();
+
+            // Append all selected files to the FormData object
+            for (let i = 0; i < files.length; i++) {
+                formData.append('files', files[i]);  // Use 'files' for multiple files
+            }
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    outputDiv.textContent = JSON.stringify(data, null, 2);  // Display the JSON response
+                    
+                } else {
+                    const errorData = await response.json();
+                    outputDiv.textContent = 'Error: ' + errorData.error;  // Show specific error message
+                }
+            } catch (error) {
+                outputDiv.textContent = 'Error: ' + error.message;
+            }
+            
+        });
+    </script>
+</body>
+</html>
