@@ -1,1 +1,1 @@
-# ResumeParser
+OPENAI_API_KEY="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"
