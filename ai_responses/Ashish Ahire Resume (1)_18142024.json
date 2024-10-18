@@ -1,0 +1,86 @@
+{
+    "personal_information": {
+        "first_name": "Ashish",
+        "middle_name": "",
+        "last_name": "Ahire",
+        "date_of_birth": "",
+        "email": "ashahire00@gmail.com",
+        "mobile_number": "+91 7972517954",
+        "designation": "Jr. QA engineer",
+        "total_experience": {
+            "years": "3",
+            "months": "11"
+        },
+        "availability": ""
+    },
+    "key_skills": {
+        "skills": [
+            "Unity 3D",
+            "Blender",
+            "Maya",
+            "Unreal Engine",
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe Premiere Pro",
+            "Adobe After Effects",
+            "Adobe XD",
+            "C",
+            "C#"
+        ],
+        "languages": [
+            "English",
+            "Hindi",
+            "Marathi",
+            "Basic Japanese"
+        ]
+    },
+    "education": [
+        {
+            "institute": "Sinhgad College of Engineering, Pune",
+            "degree": "Third Year",
+            "start_date": "",
+            "end_date": ""
+        }
+    ],
+    "address_details": {
+        "address": "Electronic City phase II",
+        "city": "Bengaluru",
+        "country": "India",
+        "postal_code": "560100"
+    },
+    "social_links": {
+        "urls": []
+    },
+    "experience": [
+        {
+            "title": "Jr. QA engineer",
+            "company_name": "Reliance Animation, Pune",
+            "company_location": "Pune",
+            "employment_type": "",
+            "start_date": "Sep 2021",
+            "end_date": "Nov 2021",
+            "current_role": false,
+            "summary": "Worked on game testing, creating bug reports, and collaborating with the development team."
+        },
+        {
+            "title": "Graphic Designer Intern",
+            "company_name": "Learnovate, Pune",
+            "company_location": "Pune",
+            "employment_type": "",
+            "start_date": "Aug 2021",
+            "end_date": "Sep 2021",
+            "current_role": false,
+            "summary": "Collaborated on visual designs, social media graphics, and website layout."
+        },
+        {
+            "title": "Freelancer Graphic Designer",
+            "company_name": "Freelancer, Pune",
+            "company_location": "Pune",
+            "employment_type": "",
+            "start_date": "2018",
+            "end_date": "Present",
+            "current_role": true,
+            "summary": "Worked with various clients on branding, marketing collateral, and website designs from concept to completion."
+        }
+    ]
+}

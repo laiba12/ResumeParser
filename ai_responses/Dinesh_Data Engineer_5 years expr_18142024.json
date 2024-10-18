@@ -1,0 +1,89 @@
+{
+    "personal_information": {
+        "first_name": "Dinesh",
+        "middle_name": "Chandra",
+        "last_name": "M",
+        "email": "dinesh.dataengineer09@gmail.com",
+        "mobile_number": "+91-8088522306",
+        "designation": "Data Engineer",
+        "total_experience": {
+            "years": 12,
+            "months": 6
+        }
+    },
+    "key_skills": {
+        "skills": [
+            "Azure ADF",
+            "Azure Databricks",
+            "Azure Data Lake",
+            "SQL",
+            "Spark",
+            "Data Warehousing",
+            "Data Modeling",
+            "Scala",
+            "Python"
+        ],
+        "languages": [
+            "C",
+            "C++",
+            "Python",
+            "SQL",
+            "Pyspark",
+            "Scala"
+        ]
+    },
+    "education": [
+        {
+            "institute": "MADRAS University, Chennai",
+            "degree": "MCA",
+            "start_date": "",
+            "end_date": ""
+        }
+    ],
+    "address_details": {},
+    "social_links": {
+        "urls": []
+    },
+    "experience": [
+        {
+            "title": "Data Engineer",
+            "company_name": "Elait IT Technology Services Pvt. Ltd.",
+            "company_location": "Bangalore",
+            "employment_type": "Full-time",
+            "start_date": "Jan 2020",
+            "end_date": "Jan 2024",
+            "current_role": true,
+            "summary": "Worked on projects involving Azure Data Factory, Databricks, and Power BI. Responsible for data loading, monitoring, and scheduling."
+        },
+        {
+            "title": "Module Lead",
+            "company_name": "Mphasis Ltd.",
+            "company_location": "Bangalore",
+            "employment_type": "Full-time",
+            "start_date": "Aug 2013",
+            "end_date": "Jan 2020",
+            "current_role": false,
+            "summary": "Led a team on projects related to Abinitio, Azure Data Factory, Databricks, and Power BI. Involved in ETL testing and project planning."
+        },
+        {
+            "title": "Sr Software Engineer",
+            "company_name": "AonHewitt (Pyramid IT Consulting Services)",
+            "company_location": "Mumbai",
+            "employment_type": "Full-time",
+            "start_date": "March 2013",
+            "end_date": "Aug 2013",
+            "current_role": false,
+            "summary": "Worked on testing, automation, and performance tuning activities using Cognos and Azure technologies."
+        },
+        {
+            "title": "Software Engineer",
+            "company_name": "Intellicon Pvt Ltd",
+            "company_location": "Mumbai",
+            "employment_type": "Full-time",
+            "start_date": "July 2011",
+            "end_date": "Feb 2013",
+            "current_role": false,
+            "summary": "Engaged in software testing and validation activities for various clients in the warehouse domain."
+        }
+    ]
+}
