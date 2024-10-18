@@ -1,15 +1,17 @@
 from PyPDF2 import PdfReader
-import docx
+import docx 
 import textract
 import win32com.client
 import subprocess
 import pythoncom
 import os
+
 def extract_text_from_pdf(file_path):
     pdf_document = PdfReader(file_path)
     text = ""
     for page in pdf_document.pages:
         text += page.extract_text()
+    print(text)    
     return text
 
 def extract_text_from_docx(file_path):
@@ -18,13 +20,17 @@ def extract_text_from_docx(file_path):
     print(text)
     return text
 
-# def extract_text_from_doc(file_path):
-#     try:
-#         text = textract.process(file_path).decode('utf-8')
-#         return text
-#     except Exception as e:
-#         print(f"An error occurred while extracting text from {file_path}: {str(e)}")
-#         return ""
+
+def extract_text_from_doc(file_path):
+    try:
+        # Using textract to extract text from .doc file
+        text = textract.process(file_path)
+        print(text)
+        # textract returns a byte string, so we need to decode it
+        return text.decode('utf-8')
+    except Exception as e:
+        print(f"Error extracting text from .doc file: {e}")
+        return None
     
 # def extract_text_from_doc(file_path):
 #     word = win32com.client.Dispatch("Word.Application")
