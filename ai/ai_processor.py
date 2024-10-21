@@ -2,8 +2,7 @@ import openai
 import os
 
 
-openai.api_key = 'sk-dsoXDnCOhC-y3BfOp-JZzlBUoA3AnBZS2gJKKv_JH2T3BlbkFJIWItWZF9SB-TwBx3CqBXqCVKouPBOkLAVilxACfzUA'
- 
+openai.api_key = ''
 
 def call_openai_api(prompt_text):
     
