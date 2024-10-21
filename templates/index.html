@@ -24,8 +24,11 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
+            max-width: 800px; /* Increased the container width */
             width: 100%;
+            height: 90vh; /* Take up 90% of the viewport height */
+            display: flex;
+            flex-direction: column;
         }
         h1 {
             font-size: 24px;
@@ -73,14 +76,14 @@
             background-color: #218838;
         }
         #output {
+            flex-grow: 1; /* Take up remaining space */
             margin-top: 20px;
             white-space: pre-wrap;
             border: 1px solid #ccc;
             padding: 15px;
             background-color: #f9f9f9;
             border-radius: 5px;
-            max-height: 300px;
-            overflow-y: auto;
+            overflow-y: auto; /* Scroll for large content */
             color: #333;
         }
         @media (max-width: 600px) {
