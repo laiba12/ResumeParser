@@ -1,0 +1,88 @@
+{
+    "personal_information": {
+        "first_name": "BHARATH",
+        "middle_name": "",
+        "last_name": "CHANDRA",
+        "date_of_birth": "7th June 1994",
+        "email": "gandhambharathc@gmail.com",
+        "mobile_number": "+91 7386192894",
+        "designation": "Software Developer",
+        "total_experience": {
+            "years": 3,
+            "months": 0
+        },
+        "availability": ""
+    },
+    "key_skills": {
+        "skills": [
+            ".NET Development",
+            "SDLC",
+            "Front-end Development",
+            "DevOps Practices",
+            "Microservices Architecture",
+            "Database Management",
+            "Performance Optimization",
+            "Security Compliance"
+        ],
+        "languages": [
+            "English",
+            "Hindi",
+            "Telugu"
+        ]
+    },
+    "education": [
+        {
+            "institute": "IIIT Hyderabad, Hyderabad, Telangana",
+            "degree": "Master of Science, Information Technology",
+            "start_date": "2019",
+            "end_date": "2019"
+        },
+        {
+            "institute": "Vaagdevi College of Engineering, Warangal, Telangana",
+            "degree": "B.Tech., Engineering",
+            "start_date": "2016",
+            "end_date": "2016"
+        }
+    ],
+    "address_details": {
+        "address": "Indiranagar, Narsampet",
+        "city": "Warangal",
+        "country": "India",
+        "postal_code": "506132"
+    },
+    "social_links": {
+        "urls": []
+    },
+    "experience": [
+        {
+            "title": "Software Developer",
+            "company_name": "Tectoro Consulting Private Limited",
+            "company_location": "Hyderabad, Telangana",
+            "employment_type": "",
+            "start_date": "Jan'24",
+            "end_date": "Apr'24",
+            "current_role": "",
+            "summary": "Specialized in migrating Web forms, Console, and Web Applications to .NET Core. Implemented advanced technologies like PingFederate Authentication, Redis Cache, HCP file Transfer, and Splunk Logging Mechanism."
+        },
+        {
+            "title": "Project Engineer",
+            "company_name": "Wipro",
+            "company_location": "Hyderabad, Telangana",
+            "employment_type": "",
+            "start_date": "Dec'21",
+            "end_date": "Jan'24",
+            "current_role": "",
+            "summary": "Led migration projects transitioning WCF to Web API architecture, ASP.NET Application to Razor pages, and ASP.NET Web forms to Angular 13 forms."
+        },
+        {
+            "title": "Associate Software Engineer",
+            "company_name": "Prodapt Solutions",
+            "company_location": "Chennai, Tamil Nadu",
+            "employment_type": "",
+            "start_date": "Nov'19",
+            "end_date": "Sep'20",
+            "current_role": "",
+            "summary": "Handled tickets within Jira using ASP.NET MVC framework, addressed technical inquiries, and acted as an L1 Support Engineer."
+        }
+    ]
+}

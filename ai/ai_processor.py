@@ -2,7 +2,8 @@ import openai
 import os
 
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = ''
+ 
 
 def call_openai_api(prompt_text):
     
