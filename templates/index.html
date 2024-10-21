@@ -5,30 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume PDF Upload</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0073e6;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 2px dashed #0073e6;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
         }
         #output {
             margin-top: 20px;
-            white-space: pre-wrap; /* Preserve white space formatting */
+            white-space: pre-wrap;
             border: 1px solid #ccc;
-            padding: 10px;
+            padding: 15px;
             background-color: #f9f9f9;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            input[type="file"] {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Upload Your Resumes (Multiple Files)</h1>
-    <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
-        <!-- Allow multiple file uploads -->
-        <input type="file" id="fileInput" name="files" multiple accept=".pdf, .docx, .doc, .txt" required><br><br>
-        <input type="submit" value="Upload Files"> <!-- Updated label for clarity -->
-    </form><br>
+    <div class="container">
+        <h1>Upload Your Resumes (Multiple Files)</h1>
+        <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+            <input type="file" id="fileInput" name="files" multiple accept=".pdf, .docx, .doc, .txt" required><br>
+            <input type="submit" value="Upload Files">
+        </form>
 
-    
-    <button onclick="copyText()">Copy Text</button>
-    <pre id="output"></pre>
+        <button onclick="copyText()">Copy Text</button>
+        <pre id="output"></pre>
+    </div>
 
     <script>
         function copyText() {
@@ -81,7 +159,6 @@
             } catch (error) {
                 outputDiv.textContent = 'Error: ' + error.message;
             }
-            
         });
     </script>
 </body>
