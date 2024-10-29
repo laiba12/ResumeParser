@@ -3,6 +3,7 @@ import os
 
 
 openai.api_key = ''
+ 
 
 def call_openai_api(prompt_text):
     

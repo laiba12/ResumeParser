@@ -24,9 +24,9 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            max-width: 800px; /* Increased the container width */
+            max-width: 800px;
             width: 100%;
-            height: 90vh; /* Take up 90% of the viewport height */
+            height: 90vh;
             display: flex;
             flex-direction: column;
         }
@@ -76,16 +76,34 @@
             background-color: #218838;
         }
         #output {
-            flex-grow: 1; /* Take up remaining space */
+            flex-grow: 1;
             margin-top: 20px;
             white-space: pre-wrap;
             border: 1px solid #ccc;
             padding: 15px;
             background-color: #f9f9f9;
             border-radius: 5px;
-            overflow-y: auto; /* Scroll for large content */
+            overflow-y: auto;
             color: #333;
         }
+
+        /* Spinner Styles */
+        .spinner {
+            display: none; /* Initially hidden */
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #0073e6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* For smaller screens */
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -108,6 +126,11 @@
         </form>
 
         <button onclick="copyText()">Copy Text</button>
+
+        <!-- Spinner to show loading animation -->
+        <div class="spinner" id="spinner"></div>
+        
+        <!-- Output for JSON response -->
         <pre id="output"></pre>
     </div>
 
@@ -131,10 +154,12 @@
 
         const form = document.getElementById('uploadForm');
         const outputDiv = document.getElementById('output');
+        const spinner = document.getElementById('spinner');
 
         form.addEventListener('submit', async (event) => {
             event.preventDefault();  // Prevent default form submission
             outputDiv.textContent = "";  // Clear previous output
+            spinner.style.display = 'block';  // Show spinner
 
             const fileInput = document.getElementById('fileInput');
             const files = fileInput.files;  // Get all selected files
@@ -154,13 +179,14 @@
                 if (response.ok) {
                     const data = await response.json();
                     outputDiv.textContent = JSON.stringify(data, null, 2);  // Display the JSON response
-                    
                 } else {
                     const errorData = await response.json();
                     outputDiv.textContent = 'Error: ' + errorData.error;  // Show specific error message
                 }
             } catch (error) {
                 outputDiv.textContent = 'Error: ' + error.message;
+            } finally {
+                spinner.style.display = 'none';  // Hide spinner once response is received
             }
         });
     </script>
