@@ -1,10 +1,7 @@
 from PyPDF2 import PdfReader
-import docx 
+from docx import Document
 import textract
-import win32com.client
-import subprocess
-import pythoncom
-import os
+
 
 def extract_text_from_pdf(file_path):
     pdf_document = PdfReader(file_path)
@@ -16,7 +13,7 @@ def extract_text_from_pdf(file_path):
 
 def extract_text_from_docx(file_path):
     
-    doc = docx.Document(file_path)
+    doc = Document(file_path)
     text = ""
 
     try:
@@ -61,60 +58,3 @@ def extract_text_from_doc(file_path):
         return None
 
 
-# def extract_text_from_doc(file_path):
-#     if not os.path.exists(file_path):
-#         raise FileNotFoundError(f"File not found: {file_path}")
-
-#     pythoncom.CoInitialize()
-    
-#     try:
-#         word = win32com.client.Dispatch("Word.Application")
-#         word.Visible = False
-
-#         try:
-#             doc = word.Documents.Open(file_path)
-#             text = doc.Content.Text
-#             print(text)
-#             doc.Close()
-#             return text
-#         except Exception as e:
-#             raise Exception(f"Failed to open document: {e}")
-#     finally:
-#         word.Quit()
-#         pythoncom.CoUninitialize()
-
-
-# def extract_text_from_doc(file_path):
-#     # Ensure the file exists
-#     if not os.path.exists(file_path):
-#         raise FileNotFoundError(f"File not found: {file_path}")
-
-#     # Initialize COM library
-#     pythoncom.CoInitialize()
-
-#     try:
-#         word = win32com.client.Dispatch("Word.Application")
-#         word.Visible = False
-        
-#         # Try opening the document
-#         try:
-#             doc = word.Documents.Open(file_path)
-#         except Exception as e:
-#             raise Exception(f"Failed to open document: {e}")
-
-#         # Extract text
-#         try:
-#             text = doc.Content.Text
-#         except Exception as e:
-#             raise Exception(f"Failed to extract text: {e}")
-#         finally:
-#             doc.Close()
-
-#         word.Quit()
-#         return text
-
-#     except Exception as e:
-#         print(f"Error: {e}")
-#     finally:
-#         # Uninitialize COM library
-#         pythoncom.CoUninitialize()
