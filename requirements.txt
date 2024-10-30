@@ -1,8 +1,10 @@
-docx==0.2.4
 Flask==3.0.3
 flask_cors==5.0.0
 numpy==2.1.2
 openai==1.53.0
 PyPDF2==3.0.1
+python_docx==1.1.2
+pywin32==308
+redis==5.2.0
 textract==1.6.5
 tiktoken==0.8.0
