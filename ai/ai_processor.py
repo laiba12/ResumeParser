@@ -2,11 +2,7 @@ import openai
 import os
 
 
-<<<<<<< HEAD
 openai.api_key = 'sk-dsoXDnCOhC-y3BfOp-JZzlBUoA3AnBZS2gJKKv_JH2T3BlbkFJIWItWZF9SB-TwBx3CqBXqCVKouPBOkLAVilxACfzUA'
-=======
-openai.api_key = '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'
->>>>>>> 1668d963f62998003c7998ac11628060f1aab3f1
  
 
 def call_openai_api(prompt_text):
