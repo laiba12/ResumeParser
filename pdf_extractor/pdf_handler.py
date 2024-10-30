@@ -1,5 +1,5 @@
 from PyPDF2 import PdfReader
-import docx 
+from docx import Document
 import textract
 import win32com.client
 import subprocess
@@ -16,7 +16,7 @@ def extract_text_from_pdf(file_path):
 
 def extract_text_from_docx(file_path):
     
-    doc = docx.Document(file_path)
+    doc = Document(file_path)
     text = ""
 
     try:
