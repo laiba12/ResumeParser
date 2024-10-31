@@ -4,7 +4,10 @@ numpy==2.1.2
 openai==1.53.0
 PyPDF2==3.0.1
 python_docx==1.1.2
+<<<<<<< HEAD
 pywin32==308
 redis==5.2.0
+=======
+>>>>>>> 129db952a652bab9c548ff2f5a601b1012c02118
 textract==1.6.5
 tiktoken==0.8.0
